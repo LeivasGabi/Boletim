@@ -8,40 +8,16 @@
 
 
     <EditText
-        android:id="@+id/editTextStudentName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:text="Nome do Aluno"
-        app:layout_constraintBottom_toTopOf="@+id/editTextSubject"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
-
-    <EditText
         android:id="@+id/editTextSubject"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
+        android:hint="Disciplina"
         android:inputType="textPersonName"
-        android:text="Disciplina"
         app:layout_constraintBottom_toTopOf="@+id/editTextGradeFirst"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextStudentName"/>
-
-    <EditText
-        android:id="@+id/editTextGradeFirst"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Nota 1"
-        android:inputType="number"
-        app:layout_constraintBottom_toTopOf="@+id/editTextGradeSecond"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSubject"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextStudentName" />
 
     <EditText
         android:id="@+id/editTextGradeSecond"
@@ -53,7 +29,31 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextGradeThird"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextGradeFirst" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextGradeFirst"/>
+
+    <EditText
+        android:id="@+id/editTextGradeFourth"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nota 4"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/buttonSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextGradeThird"/>
+
+    <EditText
+        android:id="@+id/editTextStudentName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Nome do Aluno"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/editTextSubject"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <EditText
         android:id="@+id/editTextGradeThird"
@@ -68,16 +68,26 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextGradeSecond" />
 
     <EditText
-        android:id="@+id/editTextGradeFourth"
+        android:id="@+id/editTextGradeFirst"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Nota 4"
+        android:hint="Nota 1"
         android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/editTextGradeSecond"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSubject" />
+
+    <Button
+        android:id="@+id/buttonSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Save"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextGradeThird"/>
+        app:layout_constraintTop_toBottomOf="@+id/editTextGradeFourth"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

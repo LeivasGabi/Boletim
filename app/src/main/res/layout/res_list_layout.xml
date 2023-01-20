@@ -6,8 +6,8 @@
     android:layout_height="wrap_content">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="417dp"
-        android:layout_height="99dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:cardCornerRadius="2dp"
         app:cardElevation="8dp"
         app:cardPreventCornerOverlap="false"
@@ -15,7 +15,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -40,27 +41,11 @@
                     android:textColor="#000"
                     android:textSize="19sp" />
 
-                <TextView
-                    android:id="@+id/textViewReceipeIngredients"
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerViewSon"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Ingredientes"
-                    android:textSize="10sp"
-                    app:layout_constraintBottom_toTopOf="@+id/textViewReceipePreparation"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewReceipeTitle" />
+                    android:layout_height="wrap_content" />
 
-                <TextView
-                    android:id="@+id/textViewReceipePreparation"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="Mode de Preparo"
-                    android:textSize="10sp"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/textViewReceipeIngredients" />
 
             </LinearLayout>
         </androidx.constraintlayout.widget.ConstraintLayout>

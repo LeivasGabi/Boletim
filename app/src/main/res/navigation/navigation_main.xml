@@ -16,6 +16,10 @@
         <action
             android:id="@+id/action_homeFragment_to_listFragment3"
             app:destination="@id/listFragment" />
+        <argument
+            android:name="students"
+            app:argType="com.example.grades.model.Students"
+            app:nullable="true" />
     </fragment>
     <fragment
         android:id="@+id/listFragment"
