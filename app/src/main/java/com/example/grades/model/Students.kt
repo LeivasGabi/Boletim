@@ -4,5 +4,5 @@ import java.io.Serializable
 
 data class Students(
     var name: String,
-    var grades: Grades
+    var grades: List<Grades>
 ): Serializable

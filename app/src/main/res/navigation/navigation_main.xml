@@ -19,13 +19,18 @@
         <argument
             android:name="students"
             app:argType="com.example.grades.model.Students"
-            app:nullable="true" />
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
     <fragment
         android:id="@+id/listFragment"
         android:name="com.example.grades.view.ListFragment"
         android:label="fragment_list"
-        tools:layout="@layout/fragment_list" />
+        tools:layout="@layout/fragment_list" >
+        <argument
+            android:name="students"
+            app:argType="com.example.grades.model.Students" />
+    </fragment>
     <fragment
         android:id="@+id/registerFragment"
         android:name="com.example.grades.view.RegisterFragment"
