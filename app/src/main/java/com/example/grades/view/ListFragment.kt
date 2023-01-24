@@ -14,19 +14,16 @@ import com.example.grades.resource.ListAdapter
 import kotlinx.android.synthetic.main.fragment_list.*
 
 
-class ListFragment : Fragment() {
-    val args: ListFragmentArgs by navArgs()
+class ListFragment : Fragment(R.layout.fragment_list) {
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
+    private val args: ListFragmentArgs by navArgs()
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         setAdapter()
     }
 
     private fun setAdapter() {
-        println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>")
-        println(setList())
-        println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>")
 
         recyclerView.apply {
             adapter = ListAdapter(setList())

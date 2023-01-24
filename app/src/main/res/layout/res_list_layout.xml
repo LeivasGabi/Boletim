@@ -45,7 +45,8 @@
                     android:id="@+id/recyclerViewSon"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"/>
+                    app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                    tools:listitem="3"/>
 
 
             </LinearLayout>

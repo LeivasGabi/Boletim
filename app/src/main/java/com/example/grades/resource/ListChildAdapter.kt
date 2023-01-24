@@ -8,7 +8,7 @@ import com.example.grades.R
 import com.example.grades.model.Grades
 import kotlinx.android.synthetic.main.res_son_layout.view.*
 
-class ListChildAdapter (val listChild: List<Grades>) : RecyclerView.Adapter<ListChildAdapter.ListChildViewHolder>() {
+class ListChildAdapter (private val listChild: List<Grades>) : RecyclerView.Adapter<ListChildAdapter.ListChildViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ListChildViewHolder {
         return ListChildViewHolder(

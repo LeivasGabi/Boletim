@@ -36,6 +36,8 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
                     )
                 )
             )
+            //val result = (gradeOne + gradeTwo + gradeThree + gradeFour)/4
+
             val action = RegisterFragmentDirections.actionRegisterFragmentToHomeFragment2(
                 student
             )
@@ -43,8 +45,8 @@ class RegisterFragment : Fragment(R.layout.fragment_register) {
         }
     }
 
-    fun listGrades(grades: Grades): List<Grades> {
-        var list = ArrayList<Grades>()
+    private fun listGrades(grades: Grades): List<Grades> {
+        val list = ArrayList<Grades>()
         list.add(grades)
         return list
     }

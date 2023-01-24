@@ -8,7 +8,7 @@ import com.example.grades.R
 import com.example.grades.model.Students
 import kotlinx.android.synthetic.main.res_list_layout.view.*
 
-class ListAdapter(val listParent: List<Students>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
+class ListAdapter(private val listParent: List<Students>) : RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
         return ListViewHolder(
@@ -20,9 +20,7 @@ class ListAdapter(val listParent: List<Students>) : RecyclerView.Adapter<Recycle
         when (holder) {
             is ListViewHolder -> {
                 holder.itemView.textViewStudentName.text = listParent[position].name
-                holder.itemView.recyclerViewSon.apply {
-                    adapter = ListChildAdapter(listParent[position].grades)
-                }
+                holder.itemView.recyclerViewSon.adapter = ListChildAdapter(listParent[position].grades)
             }
         }
     }
